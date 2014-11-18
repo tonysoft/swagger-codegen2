@@ -21,7 +21,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 swagger.setAppHandler(app);  
-swagger.configureSwaggerPaths("", "api-docs", "");
+//swagger.configureSwaggerPaths("", "api-docs", "");
 
 
 
@@ -41,6 +41,18 @@ app.get('/api-docs/:api', function(req, res) {
     res.status(200).send(doc);
   });
 });
+
+app.get('/api-docs', function(req, res) {
+  var api = "api-docs";
+  fs.readFile(__dirname + '/../apis/' + api + '.json', 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    var doc = JSON.parse(data);
+    res.status(200).send(doc);
+  });
+});
+
 
 
 

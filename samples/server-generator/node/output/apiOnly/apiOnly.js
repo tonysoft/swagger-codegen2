@@ -25,8 +25,6 @@ swagger.setAppHandler(app);
 
 
 
-var models = require("./models.js");
-
 var fs = require('fs');
 app.get('/api-docs/:api', function(req, res) {
   var api = req.params.api;
@@ -56,33 +54,9 @@ app.get('/api-docs', function(req, res) {
 
 
 
-var UserApi = require("./apis/UserApi.js");
-var CccApi = require("./apis/CccApi.js");
-var PetApi = require("./apis/PetApi.js");
-var StoreApi = require("./apis/StoreApi.js");
-swagger.addModels(models)
-  .addPOST(UserApi.createUser)
-.addPOST(UserApi.createUsersWithArrayInput)
-.addPOST(UserApi.createUsersWithListInput)
-.addPUT(UserApi.updateUser)
-.addDELETE(UserApi.deleteUser)
-.addGET(UserApi.getUserByName)
-.addGET(UserApi.loginUser)
-.addGET(UserApi.logoutUser)
-.addGET(CccApi.getCCC)
-.addGET(PetApi.getPetById)
-.addDELETE(PetApi.deletePet)
-.addPOST(PetApi.addPet)
-.addPUT(PetApi.updatePet)
-.addGET(PetApi.findPetsByStatus)
-.addGET(PetApi.findPetsByTags)
-.addGET(StoreApi.getOrderById)
-.addDELETE(StoreApi.deleteOrder)
-.addPOST(StoreApi.placeOrder)
-;
   // configures the app
 swagger.configure("http://localhost:8002", "0.1");
 
 //  start the server
-app.listen(8002);
+app.listen(8003);
 

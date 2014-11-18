@@ -13,6 +13,10 @@
     {
       "path": "/user",
       "description": "Operations about user"
+    },
+    {
+      "path": "/eqccc",
+      "description": "Measurements for Customer / Cage / Cabinet Data Center Usage"
     }
   ],
   "authorizations": {

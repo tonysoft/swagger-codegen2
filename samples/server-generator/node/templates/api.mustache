@@ -54,7 +54,8 @@ exports.{{nickname}} = {
     {{#requiredParamCount}}
     {{#requiredParams}}
     if (!req.params.{{baseName}}) {
-      throw errors.invalid('{{baseName}}');
+      return writeResponse(res, {message: "Required Parameter: '{{baseName}}' is missing..."}, 500);    
+//      throw errors.invalid('{{baseName}}');
     }
     {{/requiredParams}}
     {{/requiredParamCount}}

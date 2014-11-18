@@ -1,0 +1,5 @@
+./bin/runscala.sh samples/server-generator/node/NodeServerFromSpec.scala http://petstore.swagger.wordnik.com/api/api-docs special-key
+
+./bin/runscala.sh samples/server-generator/node/NodeServerFromSpec.scala http://localhost:8003/api-docs special-key
+
+

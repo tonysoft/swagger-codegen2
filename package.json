@@ -10,7 +10,8 @@
   "license": "Apache",
   "readmeFilename": "README.md",
   "dependencies": {
-    "json2yaml": "~1.0",
-    "js-yaml": "~3.0"
+    "cassandra-driver": "^1.0.1",
+    "js-yaml": "~3.0",
+    "json2yaml": "~1.0"
   }
 }
